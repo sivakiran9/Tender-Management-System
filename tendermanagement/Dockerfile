@@ -10,6 +10,6 @@ RUN mv apache-tomcat-8.5.58 tomcat
 RUN mkdir -p /home/satya
 RUN mv /tomcat /home/satya
 COPY target/tendermanagement-0.0.1-SNAPSHOT.war /home/satya/tomcat/webapps
-#EXPOSE 8080
+EXPOSE 8080
 ENTRYPOINT sh /home/satya/tomcat/bin/startup.sh && bash
 
